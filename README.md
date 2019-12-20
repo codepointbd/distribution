@@ -1,4 +1,8 @@
-# Distribution
+## How to run locally for development
+
+[here](artifacts/how-to-run.md)
+
+## Distribution
 
 The Docker toolset to pack, ship, store, and deliver content.
 
