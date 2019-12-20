@@ -1,5 +1,14 @@
 # How to run using docker compose
 
+Pull/Clone the git repo first:
+```
+$ mkdir -p $GOPATH/src/github.com/docker/
+$ cd $GOPATH/src/github.com/docker/
+$ git clone git@github.com:codepointbd/distribution.git
+$ git remote set-url origin git@github.com:codepointbd/distribution.git
+$ git pull origin master
+```
+
 Make sure you have docker and docker-compose installed in your system. 
 Run the following command to start registry server:
 
