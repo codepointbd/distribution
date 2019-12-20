@@ -11,7 +11,6 @@ import (
 	dcontext "github.com/docker/distribution/context"
 	"github.com/docker/distribution/registry/auth"
 	"net/http"
-	"strings"
 )
 
 type accessController struct {
@@ -55,11 +54,11 @@ func (ac *accessController) Authorized(ctx context.Context, accessRecords ...aut
 		}
 	}
 
-	for _, record := range accessRecords {
-		if record.Type == "repository" && !strings.HasPrefix(record.Name, username+"/") {
-			return nil, fmt.Errorf("repository must have start with <username>/")
-		}
-	}
+	//for _, record := range accessRecords {
+	//	if record.Type == "repository" && !strings.HasPrefix(record.Name, username+"/") {
+	//		return nil, fmt.Errorf("repository must have start with <username>/")
+	//	}
+	//}
 	return auth.WithUser(ctx, auth.UserInfo{Name: username}), nil
 }
 
